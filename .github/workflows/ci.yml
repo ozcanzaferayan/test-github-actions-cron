@@ -1,16 +1,13 @@
-name: "Hello"
+name: CI
 
 on:
   schedule:
-    - cron:  '*/2 * * * *'
+    - cron:  "*/2 * * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Get the output time
+    - name: Patates
       run: echo "Patates"
-    - name: bash
-      run: |
-        echo "Zafer" > main.txt
