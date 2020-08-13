@@ -1,4 +1,5 @@
 name: "Hello"
+
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -7,7 +8,6 @@ on:
 jobs:
   stale:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
     - name: Get the output time
       run: echo "Patates"
