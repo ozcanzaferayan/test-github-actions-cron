@@ -7,11 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: File creator job
     steps:
     - uses: actions/checkout@v1
-    #- name: Patates
-    #  run: echo "Patates" > patatesList.txt
     - shell: bash
       run: |
-        echo "Zafer" > math-homework.txt
+        echo "Zafer" > test.txt
+    - name: Upload file
+      uses: actions/upload-artifact@v2
+      with:
+        name: results.txt
+        path: test.txt
